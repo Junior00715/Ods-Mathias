@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ambiente Seguro para Idosos</title>
+  <link rel="stylesheet" href="/CSS/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+  <header>
+    <h1>Ambiente Seguro para Idosos</h1>
+  </header>
+
+  <section id="dicas" class="section">
+    <h2>Dicas de Segurança</h2>
+    <div>
+      <select id="categoria" onchange="filtrarDicas()">
+        <option value="todas">Todas</option>
+        <option value="quedas">Evitar Quedas</option>
+        <option value="seguranca-casa">Segurança em Casa</option>
+        <option value="saude">Saúde e Bem-estar</option>
+      </select>
+    </div>
+    <ul class="dicas-list">
+      <li class="quedas">Evite tapetes soltos em casa para evitar quedas.</li>
+      <li class="seguranca-casa">Instale barras de apoio no banheiro para segurança.</li>
+      <li class="saude">Visite regularmente o médico para check-ups de saúde.</li>
+      <li class="quedas">Use calçados adequados e confortáveis.</li>
+    </ul>
+  </section>
+
+  <section id="mapa" class="section">
+    <h2>Mapa de Marcações Seguras</h2>
+    <div id="map-container">
+      <div id="map"></div>
+    </div>
+    <button id="btn-alerta" onclick="enviarAlerta()">Enviar Alerta</button>
+    <p id="alert-message"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Ambiente Seguro para Idosos</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="/JavaScript/script.js"></script>
+</body>
+</html>
